@@ -5,11 +5,11 @@ name = "pypi"
 
 [packages]
 django = "*"
-djangorestframework = "*"
 pygments = "*"
 django-extensions = "*"
 django-environ = "*"
 markdown = "*"
+djangorestframework = "*"
 
 [dev-packages]
 
