@@ -11,6 +11,7 @@ django-environ = "*"
 markdown = "*"
 djangorestframework = "*"
 pytz = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
