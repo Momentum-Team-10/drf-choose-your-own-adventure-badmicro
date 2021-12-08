@@ -22,6 +22,8 @@ class Book(models.Model):
     publication_date = models.DateField(blank=True, null=True)
     publisher = models.CharField(max_length=100, blank=True, default='')
     genre = models.ManyToManyField(to=Genre, related_name="books", blank=True)
+    featured = models.BooleanField(default=False)
+    owner = models.ForeignKey(User, related_name='books', on_delete=models.CASCADE)
 
     class Meta:
         ordering = ['title']
@@ -29,11 +31,3 @@ class Book(models.Model):
 
     def __str__(self):
         return self.title
-
-class Featured(models.Model):
-    featured = models.ForeignKey(
-        Book, related_name='featured_books', on_delete=models.CASCADE
-    )
-
-    def __str__(self):
-        return self.featured
