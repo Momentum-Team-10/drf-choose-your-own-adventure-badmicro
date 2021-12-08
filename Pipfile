@@ -12,6 +12,8 @@ markdown = "*"
 djangorestframework = "*"
 pytz = "*"
 psycopg2-binary = "*"
+django-on-heroku = "*"
+gunicorn = "*"
 
 [dev-packages]
 
