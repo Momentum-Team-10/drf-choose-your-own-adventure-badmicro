@@ -31,6 +31,9 @@ class BookDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,
                             IsOwnerOrReadOnly,)
 
+
+# User views
+
 class UserList(generics.ListAPIView): 
     queryset = User.objects.all()
     serializer_class = UserSerializer
